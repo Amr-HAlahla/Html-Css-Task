@@ -126,10 +126,19 @@ header .images {
     grid-area: one;
     display: flex;
     flex: 1 1;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: self-start;
     gap: 10px;
     margin: 0 auto;
     width: 50%;
+}
+
+.features .two {
+    grid-area: two;
+}
+
+.features .three {
+    grid-area: three;
 }
 
 .features h3 {
@@ -145,14 +154,28 @@ header .images {
     margin: 0;
     font-weight: 500;
     color: #898383;
+    margin-top: 12px;
 }
 
-.features .two {
-    grid-area: two;
+.features #medal {
+    width: 20%;
+    position: relative;
+    top: -8px;
+    margin-right: 10px;
 }
 
-.features .three {
-    grid-area: three;
+.features #fast {
+    width: 12%;
+    margin-right: 12px;
+    position: relative;
+    top: 3px;
+}
+
+.features #v {
+    width: 60%;
+    position: relative;
+    top: -5px;
+    margin-right: 10px;
 }
 
 .row1 {
