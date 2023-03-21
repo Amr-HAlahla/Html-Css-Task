@@ -82,6 +82,7 @@ header ul {
 
 header ul li {
     list-style: none;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
 }
 
 header ul a {
@@ -93,8 +94,17 @@ header ul a {
 }
 
 header ul li:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     transform: scale(1.05);
+    box-shadow: inset 1px 0px 10px 4px rgba(235, 68, 68, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+header ul a:hover {
+    color: white;
+    padding: 5px;
 }
 
 header .images {
@@ -233,6 +243,12 @@ header .images {
     color: #1e4f4f;
 }
 
+.row1 .info .value:hover {
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0px 0px 10px rgba(183, 87, 87, 0.5);
+    text-align: center;
+}
+
 .row1 a {
     border: 2px solid black;
     text-align: center;
@@ -243,6 +259,49 @@ header .images {
     position: relative;
     padding: 15px 20px;
     bottom: -15px;
+}
+
+.row1 #more:hover {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.4) inset;
+    animation: border-color 2s linear infinite, border-move 2s linear infinite;
+    font-size: 20px;
+}
+
+@keyframes border-color {
+    from {
+        border-color: rgba(255, 0, 0, 0.4);
+    }
+
+    to {
+        border-color: rgba(255, 255, 0, 0.4);
+    }
+}
+
+@keyframes border-move {
+    0% {
+        box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.4) inset;
+        transform: translate(0, 0);
+    }
+
+    25% {
+        box-shadow: 0 0 0 4px rgba(255, 255, 0, 0.4) inset;
+        transform: translate(10px, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 0 4px rgba(0, 255, 0, 0.4) inset;
+        transform: translate(10px, 10px);
+    }
+
+    75% {
+        box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.4) inset;
+        transform: translate(0, 10px);
+    }
+
+    100% {
+        box-shadow: 0 0 0 4px rgba(255, 0, 255, 0.4) inset;
+        transform: translate(0, 0);
+    }
 }
 
 .row2 {
@@ -287,6 +346,11 @@ header .images {
     display: inline-block;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
+}
+
+.row2 .info h2:hover {
+    text-decoration: underline;
+    /* box-shadow: 0px 0px 10px rgba(183, 87, 87, 0.5); */
 }
 
 .row2 .info .content {
@@ -345,6 +409,11 @@ header .images {
     width: 50%;
 }
 
+.feedback .box1:hover,
+.box2:hover {
+    box-shadow: inset 1px 0px 10px 7px rgba(243, 207, 207, 0.5);
+}
+
 .feedback img {
     width: 10%;
 }
@@ -385,9 +454,19 @@ footer {
     white-space: nowrap;
     position: relative;
     right: -25px;
+}
 
+footer:hover {
+    box-shadow: inset 1px 0px 10px 7px rgba(74, 140, 88, 0.5);
 }
 
 .social img {
     width: 20%;
+}
+
+.social img:hover {
+    /* border: 3px solid #1e4f4f;
+    background: white; */
+    border-radius: 50%;
+    box-shadow: 1px 0px 10px 5px rgba(156, 232, 172, 0.5);
 }
